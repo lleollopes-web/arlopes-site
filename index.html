@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AR LOPES Consultoria em Engenharia | Projetos BR-LEGAL em rodovias federais</title>
+<meta name="description" content="AR LOPES Consultoria em Tecnologia e Serviços de Engenharia — projetos de sinalização rodoviária no padrão DNIT, com foco no Programa BR-Legal, em rodovias federais de todo o Brasil.">
+
+<!-- Fontes: Oswald (display, referência às placas de rodovia) + IBM Plex Sans (texto) + IBM Plex Mono (dados técnicos) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="logo">
+      <span class="mark"></span>
+      <span>
+        AR LOPES
+        <small>CONSULTORIA EM ENGENHARIA</small>
+      </span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#mapa">Atuação</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Programa BR-LEGAL / DNIT</span>
+      <h1>Sinalização que <em>protege vidas</em> nas rodovias federais</h1>
+      <p class="lead">
+        Projetamos e acompanhamos a execução de sinalização horizontal, vertical
+        e dispositivos de segurança viária em rodovias federais brasileiras,
+        dentro do Programa Nacional de Segurança e Sinalização Rodoviária (BR-LEGAL).
+      </p>
+      <div class="hero-actions">
+        <a href="#mapa" class="btn-primary">Ver atuação no mapa</a>
+        <a href="#portfolio" class="btn-outline">Conhecer projetos</a>
+      </div>
+    </div>
+    <div class="hero-figure">
+      <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de placa de rodovia">
+        <rect width="400" height="500" fill="#1b3a30"/>
+        <rect x="30" y="60" width="340" height="90" rx="4" fill="#16302a" stroke="#2fa87e" stroke-width="2"/>
+        <text x="200" y="115" text-anchor="middle" fill="#ecebe4" font-family="Oswald, sans-serif" font-size="42" font-weight="600">BR-116</text>
+        <rect x="30" y="180" width="160" height="60" rx="4" fill="#16302a" stroke="#2fa87e" stroke-width="2"/>
+        <text x="110" y="218" text-anchor="middle" fill="#ecebe4" font-family="Oswald, sans-serif" font-size="26" font-weight="600">180 km</text>
+        <rect x="210" y="180" width="160" height="60" rx="4" fill="#16302a" stroke="#2fa87e" stroke-width="2"/>
+        <text x="290" y="218" text-anchor="middle" fill="#ecebe4" font-family="Oswald, sans-serif" font-size="26" font-weight="600">42 km</text>
+        <g opacity="0.85">
+          <rect x="30" y="290" width="340" height="14" fill="#e8ab3d"/>
+          <rect x="30" y="330" width="340" height="14" fill="#ecebe4" opacity="0.7"/>
+          <rect x="30" y="370" width="200" height="14" fill="#e8ab3d"/>
+        </g>
+      </svg>
+      <div class="road-strip"></div>
+    </div>
+  </div>
+</section>
+
+<div class="lane-divider"></div>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat">
+      <div class="num" data-count="167" data-suffix="">0</div>
+      <div class="label">Rodovias federais mapeadas</div>
+    </div>
+    <div class="stat">
+      <div class="num" data-count="27" data-suffix="">0</div>
+      <div class="label">Estados na malha SNV/DNIT</div>
+    </div>
+    <div class="stat" id="statProjetos">
+      <div class="num" data-count="5" data-suffix="">0</div>
+      <div class="label">Projetos em destaque *</div>
+    </div>
+    <div class="stat">
+      <div class="num" data-count="948" data-suffix="">0</div>
+      <div class="label">Km em projetos executados *</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MAPA ===================== -->
+<section class="section" id="mapa">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Atuação no Brasil</span>
+      <h2>Onde já levamos sinalização e segurança</h2>
+      <p>
+        O mapa abaixo traz a malha rodoviária federal (Sistema Nacional de Viação / DNIT).
+        As rodovias em <strong style="color:var(--yellow)">amarelo</strong> têm projetos executados
+        pela nossa equipe — clique em uma linha para ver os detalhes.
+      </p>
+    </div>
+
+    <div class="map-layout reveal">
+      <div id="map"></div>
+      <aside class="map-panel" id="mapPanel">
+        <div class="panel-empty" id="panelEmpty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          <p>Clique em uma rodovia no mapa para ver os detalhes do projeto.</p>
+        </div>
+        <div id="panelContent" style="display:none;">
+          <span class="panel-eyebrow">Rodovia federal</span>
+          <h3 id="pBR">BR-000</h3>
+          <span class="uf-tag" id="pUF">UF</span>
+
+          <div class="data-row"><span class="k">Trecho</span><span class="v" id="pTrecho">—</span></div>
+          <div class="data-row"><span class="k">Extensão do projeto</span><span class="v" id="pExtensao">—</span></div>
+          <div class="data-row"><span class="k">Período</span><span class="v" id="pPeriodo">—</span></div>
+          <div class="data-row"><span class="k">Empresa contratada</span><span class="v" id="pEmpresa">—</span></div>
+          <div class="data-row"><span class="k">Serviço</span><span class="v" id="pServico">—</span></div>
+          <div class="data-row"><span class="k">Programa</span><span class="v" id="pPrograma">—</span></div>
+          <span class="status-pill" id="pStatus">Status</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="map-legend reveal">
+      <span><i class="leg-base"></i> Malha federal (DNIT/SNV)</span>
+      <span><i class="leg-highlight"></i> Trechos com projeto executado</span>
+    </div>
+    <p style="font-family:var(--font-mono); font-size:0.72rem; color:var(--text-faint); margin-top:14px;">
+      * Dados de exemplo ilustrando o funcionamento do mapa — serão substituídos pela planilha real de projetos.
+    </p>
+  </div>
+</section>
+
+<div class="lane-divider"></div>
+
+<!-- ===================== PORTFÓLIO ===================== -->
+<section class="section section-alt" id="portfolio">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Portfólio</span>
+      <h2>Projetos executados</h2>
+      <p>Um retrato dos trabalhos de sinalização já entregues pela nossa equipe em rodovias federais.</p>
+    </div>
+    <span class="demo-note reveal">⚠ Cards abaixo com dados de exemplo — aguardando planilha oficial de projetos.</span>
+    <div class="card-grid reveal" id="cardGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE NÓS ===================== -->
+<section class="section" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-text reveal">
+      <span class="eyebrow">Sobre nós</span>
+      <h2 style="margin-bottom:20px;">Quem projeta a segurança das rodovias</h2>
+      <p>A <strong style="color:var(--text)">AR LOPES Consultoria em Tecnologia e Serviços de Engenharia</strong> foi fundada em 2023 com o propósito de desenvolver soluções técnicas e tecnológicas voltadas à engenharia rodoviária, atuando especialmente na elaboração de projetos de sinalização viária e dispositivos de segurança.</p>
+      <p>A empresa nasceu com o objetivo de atender órgãos públicos, empresas de supervisão, projetistas e empresas especializadas em sinalização rodoviária, oferecendo aplicações, sistemas e metodologias que contribuem para a otimização da gestão rodoviária e para o aprimoramento da elaboração de projetos.</p>
+      <p>Com foco em qualidade técnica, inovação e conformidade normativa, a AR LOPES desenvolve seus trabalhos observando os padrões estabelecidos pelas normas da ABNT, manuais técnicos, instruções normativas e diretrizes definidas pelos órgãos competentes.</p>
+      <p>Atualmente, a empresa está plenamente preparada para atuar no desenvolvimento de projetos de sinalização rodoviária no padrão DNIT, com especial atenção aos conceitos e critérios adotados no Programa BR-Legal, contribuindo para soluções mais seguras, eficientes e compatíveis com as necessidades da infraestrutura rodoviária brasileira.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <span class="dot"></span>
+        <div>
+          <h4>Especialistas em BR-LEGAL</h4>
+          <p>Atuação dedicada ao Programa Nacional de Segurança e Sinalização Rodoviária do DNIT.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <span class="dot"></span>
+        <div>
+          <h4>Cobertura nacional</h4>
+          <p>Projetos em rodovias federais distribuídos por diferentes estados e regiões do país.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <span class="dot"></span>
+        <div>
+          <h4>Sinalização horizontal e vertical</h4>
+          <p>Da concepção do projeto executivo ao acompanhamento em campo.</p>
+        </div>
+      </div>
+      <div class="pillar">
+        <span class="dot"></span>
+        <div>
+          <h4>Foco em segurança viária</h4>
+          <p>Soluções orientadas à redução de sinistros e à padronização técnica exigida pelo DNIT.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lane-divider"></div>
+
+<!-- ===================== CONTATO ===================== -->
+<section class="section" id="contato">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Contato</span>
+      <h2 style="margin-bottom:24px;">Vamos falar sobre o seu projeto</h2>
+      <ul class="contact-list">
+        <li><span class="k">E-mail</span><span>contato@suaempresa.com.br</span></li>
+        <li><span class="k">Telefone</span><span>(00) 0000-0000</span></li>
+        <li><span class="k">Endereço</span><span>Cidade / UF</span></li>
+      </ul>
+    </div>
+    <form class="contact-form reveal" id="contactForm">
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="E-mail" required>
+      <textarea placeholder="Mensagem"></textarea>
+      <button type="submit" class="btn-primary">Enviar mensagem</button>
+      <p style="font-size:0.75rem; color:var(--text-faint); font-family:var(--font-mono);">
+        * Site estático — formulário ainda sem envio configurado (ver README para opções, ex. Formspree).
+      </p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span id="year"></span> AR LOPES Consultoria em Tecnologia e Serviços de Engenharia — Todos os direitos reservados</span>
+    <span>Sinalização rodoviária · Programa BR-LEGAL/DNIT</span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

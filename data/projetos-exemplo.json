@@ -1,0 +1,60 @@
+{
+  "_aviso": "DADOS DE EXEMPLO — substituir pelo conteúdo real da planilha assim que for enviada. Estrutura pensada para casar com colunas: rodovia, UF, trecho, extensão, período, empresa contratada, tipo de serviço.",
+  "projetos": [
+    {
+      "codigo_br": "101",
+      "uf": ["BA", "SE"],
+      "trecho": "Entr. BR-324 (Feira de Santana/BA) – Entr. BR-235 (Propriá/SE)",
+      "extensao_km": 320,
+      "periodo": "2022 – 2024",
+      "empresa_contratada": "Consórcio Sinal Norte",
+      "tipo_servico": "Sinalização horizontal e vertical",
+      "programa": "BR-LEGAL 2",
+      "status": "Concluído"
+    },
+    {
+      "codigo_br": "116",
+      "uf": ["MG"],
+      "trecho": "Entr. BR-040 (Juiz de Fora) – Div. MG/RJ",
+      "extensao_km": 145,
+      "periodo": "2023 – 2025",
+      "empresa_contratada": "Engenharia Rodovia Viva Ltda.",
+      "tipo_servico": "Projeto executivo de sinalização",
+      "programa": "BR-LEGAL 2",
+      "status": "Em execução"
+    },
+    {
+      "codigo_br": "230",
+      "uf": ["PB"],
+      "trecho": "Campina Grande – Patos",
+      "extensao_km": 98,
+      "periodo": "2021 – 2023",
+      "empresa_contratada": "Consórcio Sinal Norte",
+      "tipo_servico": "Sinalização vertical e dispositivos de segurança",
+      "programa": "BR-LEGAL",
+      "status": "Concluído"
+    },
+    {
+      "codigo_br": "163",
+      "uf": ["MT"],
+      "trecho": "Sorriso – Sinop",
+      "extensao_km": 210,
+      "periodo": "2024 – 2026",
+      "empresa_contratada": "Terraplan Engenharia",
+      "tipo_servico": "Sinalização horizontal, vertical e OAE",
+      "programa": "BR-LEGAL 2",
+      "status": "Em execução"
+    },
+    {
+      "codigo_br": "153",
+      "uf": ["GO", "TO"],
+      "trecho": "Div. GO/TO – Gurupi",
+      "extensao_km": 175,
+      "periodo": "2020 – 2022",
+      "empresa_contratada": "Rodosinal Projetos",
+      "tipo_servico": "Projeto de engenharia de tráfego",
+      "programa": "BR-LEGAL",
+      "status": "Concluído"
+    }
+  ]
+}
