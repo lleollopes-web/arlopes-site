@@ -95,6 +95,9 @@ function renderStats(resumo) {
     statKm: resumo.extensao_total_km,
     statEstados: resumo.total_estados,
     statEmpresas: resumo.total_empresas,
+    statLotesHero: resumo.total_lotes,
+    statKmHero: Math.round(resumo.extensao_total_km),
+    statEstadosHero: resumo.total_estados,
   };
   Object.entries(map).forEach(([id, value]) => {
     const el = document.getElementById(id);
@@ -135,7 +138,7 @@ function initMap() {
     attributionControl: false
   }).setView([-14.2, -51.9], 4);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
     maxZoom: 10,
     minZoom: 3,
   }).addTo(map);
@@ -151,7 +154,7 @@ function initMap() {
         onEachFeature: (feature, layer) => {
           layer.on('click', () => selectRodovia(feature, layer));
           layer.on('mouseover', () => {
-            if (layer !== activeLayer) layer.setStyle({ color: '#ecebe4', weight: 3.5, opacity: 1 });
+            if (layer !== activeLayer) layer.setStyle({ color: '#1d2022', weight: 3.5, opacity: 1 });
           });
           layer.on('mouseout', () => {
             if (layer !== activeLayer) layer.setStyle(styleFor(feature));
@@ -166,7 +169,7 @@ function styleFor(feature) {
   const codigo = feature.properties.Codigo_BR;
   const temProjeto = !!rodoviaIndex[codigo];
   return {
-    color: temProjeto ? '#e8ab3d' : '#4c565a',
+    color: temProjeto ? '#e8ab3d' : '#8f958f',
     weight: temProjeto ? 3 : 1.4,
     opacity: temProjeto ? 0.95 : 0.55,
     dashArray: temProjeto ? '10 6' : null,
@@ -179,7 +182,7 @@ function selectRodovia(feature, layer) {
 
   if (activeLayer) geojsonLayer.resetStyle(activeLayer);
   activeLayer = layer;
-  layer.setStyle({ color: '#ecebe4', weight: 4, opacity: 1 });
+  layer.setStyle({ color: '#1d2022', weight: 4, opacity: 1 });
   layer.bringToFront();
 
   document.getElementById('panelEmpty').style.display = 'none';

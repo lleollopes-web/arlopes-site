@@ -6,25 +6,26 @@
    + mono técnica (dados de engenharia).
    ========================================================= */
 :root {
-  --bg: #14181a;
-  --bg-alt: #1b2124;
-  --surface: #20272a;
-  --surface-2: #262e31;
-  --line-soft: #333c40;
+  --bg: #f6f5f0;
+  --bg-alt: #edebe2;
+  --surface: #ffffff;
+  --surface-2: #f1efe6;
+  --line-soft: #dcd8cc;
 
-  --text: #ecebe4;
-  --text-dim: #9aa3a6;
-  --text-faint: #6b7477;
+  --text: #1d2022;
+  --text-dim: #565d60;
+  --text-faint: #868d8f;
 
-  --yellow: #e8ab3d;
+  --yellow: #c9862e;
+  --yellow-btn: #e8ab3d;
   --yellow-dim: #a97e30;
-  --green: #1f7a5c;
-  --green-bright: #2fa87e;
-  --red: #c1443c;
+  --green: #186a4d;
+  --green-bright: #1c9169;
+  --red: #b3392f;
 
-  --map-line-base: #4c565a;
-  --map-line-hover: #ecebe4;
-  --map-line-highlight: var(--yellow);
+  --map-line-base: #a7ada6;
+  --map-line-hover: #1d2022;
+  --map-line-highlight: var(--yellow-btn);
 
   --font-display: "Oswald", "Arial Narrow", sans-serif;
   --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
@@ -118,7 +119,7 @@ button, .btn {
 }
 
 .btn-primary {
-  background: var(--yellow);
+  background: var(--yellow-btn);
   color: #1a1a1a;
   padding: 14px 28px;
   font-size: 0.95rem;
@@ -146,7 +147,7 @@ button, .btn {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 500;
-  background: rgba(20, 24, 26, 0.92);
+  background: rgba(246, 245, 240, 0.9);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line-soft);
 }
@@ -167,7 +168,7 @@ button, .btn {
 }
 .logo .mark {
   width: 12px; height: 12px;
-  background: var(--yellow);
+  background: var(--yellow-btn);
   transform: rotate(45deg);
   flex: none;
 }
@@ -243,7 +244,7 @@ button, .btn {
   padding: 168px 0 96px;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 80% -10%, rgba(31, 122, 92, 0.18), transparent 55%),
+    radial-gradient(ellipse at 80% -10%, rgba(24, 106, 77, 0.08), transparent 55%),
     var(--bg);
 }
 .hero .wrap {
@@ -271,33 +272,64 @@ button, .btn {
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
-.hero-figure {
+/* Card de resumo real (substitui a antiga ilustração decorativa) */
+.hero-summary {
   position: relative;
-  aspect-ratio: 4 / 5;
   border: 1px solid var(--line-soft);
   border-radius: var(--radius);
   background: var(--surface);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  box-shadow: 0 18px 40px -24px rgba(29, 32, 34, 0.18);
+  padding: 32px;
 }
-.hero-figure svg { width: 100%; height: 100%; }
-
-.road-strip {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 64px;
-  background-image: repeating-linear-gradient(
-    90deg, var(--yellow) 0 44px, transparent 44px 84px
-  );
-  opacity: 0.14;
-  transform: skewY(-2deg) translateY(20px) scale(1.1);
+.hero-summary .panel-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  display: block;
+}
+.hero-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.hero-summary-item {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  background: var(--bg);
+}
+.hero-summary-item.full { grid-column: 1 / -1; }
+.hero-summary-item .num {
+  font-family: var(--font-mono);
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--green);
+  display: block;
+}
+.hero-summary-item .label {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 4px;
+  display: block;
+}
+.hero-summary-footnote {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  margin-top: 18px;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
+
   .hero .wrap { grid-template-columns: 1fr; }
-  .hero-figure { order: -1; aspect-ratio: 16/10; }
+  .hero-summary { order: -1; }
 }
 
 /* =========================================================
@@ -365,7 +397,7 @@ button, .btn {
 #map {
   height: 620px;
   width: 100%;
-  background: #10292b;
+  background: #e4e2d8;
 }
 .map-panel {
   background: var(--surface);
@@ -446,7 +478,7 @@ button, .btn {
 .map-legend span { display: inline-flex; align-items: center; gap: 8px; }
 .map-legend i { width: 18px; height: 3px; display: inline-block; border-radius: 2px; }
 .leg-base { background: var(--map-line-base); }
-.leg-highlight { background: var(--yellow); }
+.leg-highlight { background: var(--yellow-btn); }
 
 @media (max-width: 900px) {
   .map-layout { grid-template-columns: 1fr; }
