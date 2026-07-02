@@ -1,0 +1,1343 @@
+{
+  "resumo": {
+    "total_lotes": 22,
+    "extensao_total_km": 8446.18,
+    "total_segmentos": 93,
+    "total_empresas": 7,
+    "total_estados": 8
+  },
+  "lotes": [
+    {
+      "id": "AC-01",
+      "uf": "AC",
+      "lote": "01",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Acre",
+      "empresa": "Concremat - Engenharia e Tecnologia",
+      "contrato": "20 00328/2021",
+      "rodovias": [
+        "BR-317",
+        "BR-364"
+      ],
+      "qtd_rodovias": 2,
+      "extensao_total_km": 557.0,
+      "data_inicio": "2021-08-23",
+      "data_fim": "2026-08-21",
+      "periodo": "2021 – 2026",
+      "prazo_meses": 60,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 01/AC – BR-317; BR-364",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 557,00 km nas rodovias BR-317; BR-364, no Estado do Acre. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-317",
+          "km_inicial": 0.0,
+          "km_final": 407.5,
+          "extensao_km": 407.5,
+          "snv_inicial": "317BAC0170",
+          "snv_final": "317BAC0610"
+        },
+        {
+          "rodovia": "BR-364",
+          "km_inicial": 0.0,
+          "km_final": 149.5,
+          "extensao_km": 149.5,
+          "snv_inicial": "364BAC1550",
+          "snv_final": "364BAC1625"
+        }
+      ]
+    },
+    {
+      "id": "AC-02",
+      "uf": "AC",
+      "lote": "02",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Acre",
+      "empresa": "Concremat - Engenharia e Tecnologia",
+      "contrato": "24 00328/2021",
+      "rodovias": [
+        "BR-307",
+        "BR-364"
+      ],
+      "qtd_rodovias": 2,
+      "extensao_total_km": 620.68,
+      "data_inicio": "2021-08-23",
+      "data_fim": "2026-08-21",
+      "periodo": "2021 – 2026",
+      "prazo_meses": 60,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 02/AC – BR-307; BR-364",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 620,68 km nas rodovias BR-307; BR-364, no Estado do Acre. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-307",
+          "km_inicial": 179.0,
+          "km_final": 190.2,
+          "extensao_km": 11.2,
+          "snv_inicial": "307BAC0025",
+          "snv_final": "307BAC0028"
+        },
+        {
+          "rodovia": "BR-364",
+          "km_inicial": 0.0,
+          "km_final": 6.48,
+          "extensao_km": 6.48,
+          "snv_inicial": "364AAC1005",
+          "snv_final": "364AAC1005"
+        },
+        {
+          "rodovia": "BR-364",
+          "km_inicial": 149.5,
+          "km_final": 752.5,
+          "extensao_km": 603.0,
+          "snv_inicial": "364BAC1630",
+          "snv_final": "364BAC1810"
+        }
+      ]
+    },
+    {
+      "id": "AP-UNICO-NP",
+      "uf": "AP",
+      "lote": "Único",
+      "programa": "Projeto de Sinalização Vertical e Segurança Viária em Rodovias Não Pavimentadas",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Amapá",
+      "empresa": "Consórcio SMSS",
+      "contrato": "TT-690/2022",
+      "rodovias": [
+        "BR-156",
+        "BR-210"
+      ],
+      "qtd_rodovias": 2,
+      "extensao_total_km": 548.2,
+      "data_inicio": "2022-12-29",
+      "data_fim": "2027-12-27",
+      "periodo": "2022 – 2027",
+      "prazo_meses": 60,
+      "status": "Em andamento",
+      "titulo": "Projeto de Sinalização Vertical e Segurança Viária em Rodovias Não Pavimentadas – Lote Único/AP – BR-156; BR-210",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do Projeto de Sinalização Vertical e Segurança Viária em Rodovias Não Pavimentadas, contemplando 548,20 km nas rodovias BR-156; BR-210, no Estado do Amapá. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-156",
+          "km_inicial": 32.8,
+          "km_final": 271.2,
+          "extensao_km": 238.4,
+          "snv_inicial": "156BAP0232",
+          "snv_final": "156BAP0310"
+        },
+        {
+          "rodovia": "BR-156",
+          "km_inicial": 659.0,
+          "km_final": 769.8,
+          "extensao_km": 110.8,
+          "snv_inicial": "156BAP0570",
+          "snv_final": "156BAP0620"
+        },
+        {
+          "rodovia": "BR-210",
+          "km_inicial": 106.2,
+          "km_final": 305.2,
+          "extensao_km": 199.0,
+          "snv_inicial": "210BAP0110",
+          "snv_final": "210BAP0150"
+        }
+      ]
+    },
+    {
+      "id": "AP-UNICO",
+      "uf": "AP",
+      "lote": "Único",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Amapá",
+      "empresa": "Consórcio SMSS",
+      "contrato": "TT-690/2022",
+      "rodovias": [
+        "BR-156",
+        "BR-210"
+      ],
+      "qtd_rodovias": 2,
+      "extensao_total_km": 465.2,
+      "data_inicio": "2022-12-29",
+      "data_fim": "2027-12-27",
+      "periodo": "2022 – 2027",
+      "prazo_meses": 60,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote Único/AP – BR-156; BR-210",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 465,20 km nas rodovias BR-156; BR-210, no Estado do Amapá. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-156",
+          "km_inicial": 351.5,
+          "km_final": 660.2,
+          "extensao_km": 308.7,
+          "snv_inicial": "156BAP0370",
+          "snv_final": "156BAP0560"
+        },
+        {
+          "rodovia": "BR-156",
+          "km_inicial": 770.2,
+          "km_final": 820.4,
+          "extensao_km": 50.2,
+          "snv_inicial": "156BAP0630",
+          "snv_final": "156BAP0650"
+        },
+        {
+          "rodovia": "BR-210",
+          "km_inicial": 0.0,
+          "km_final": 106.3,
+          "extensao_km": 106.3,
+          "snv_inicial": "210BAP0010",
+          "snv_final": "210BAP0090"
+        }
+      ]
+    },
+    {
+      "id": "CE-01",
+      "uf": "CE",
+      "lote": "01",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Ceará",
+      "empresa": "Maia Melo Engenharia LTDA",
+      "contrato": "03 00189/2023",
+      "rodovias": [
+        "BR-020",
+        "BR-116",
+        "BR-222"
+      ],
+      "qtd_rodovias": 3,
+      "extensao_total_km": 250.7,
+      "data_inicio": "2023-09-01",
+      "data_fim": "2026-09-01",
+      "periodo": "2023 – 2026",
+      "prazo_meses": 37,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 01/CE – BR-020; BR-116; BR-222",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 250,70 km nas rodovias BR-020; BR-116; BR-222, no Estado do Ceará. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-020",
+          "km_inicial": 308.8,
+          "km_final": 406.6,
+          "extensao_km": 97.8,
+          "snv_inicial": "020BCE0600",
+          "snv_final": "020BCE0650"
+        },
+        {
+          "rodovia": "BR-116",
+          "km_inicial": 0.0,
+          "km_final": 54.0,
+          "extensao_km": 54.0,
+          "snv_inicial": "116BCE0015",
+          "snv_final": "116BCE0050"
+        },
+        {
+          "rodovia": "BR-116",
+          "km_inicial": 0.0,
+          "km_final": 0.7,
+          "extensao_km": 0.7,
+          "snv_inicial": "116ACE1005",
+          "snv_final": "116ACE1005"
+        },
+        {
+          "rodovia": "BR-222",
+          "km_inicial": 35.7,
+          "km_final": 122.6,
+          "extensao_km": 86.9,
+          "snv_inicial": "222BCE0045",
+          "snv_final": "222BCE0100"
+        },
+        {
+          "rodovia": "BR-222",
+          "km_inicial": 0.0,
+          "km_final": 5.4,
+          "extensao_km": 5.4,
+          "snv_inicial": "222BCE0015",
+          "snv_final": "222BCE0020"
+        },
+        {
+          "rodovia": "BR-222",
+          "km_inicial": 0.0,
+          "km_final": 4.9,
+          "extensao_km": 4.9,
+          "snv_inicial": "222CCE1005",
+          "snv_final": "222CCE1005"
+        },
+        {
+          "rodovia": "BR-222",
+          "km_inicial": 0.0,
+          "km_final": 1.0,
+          "extensao_km": 1.0,
+          "snv_inicial": "222VCE1005",
+          "snv_final": "222VCE1005"
+        }
+      ]
+    },
+    {
+      "id": "CE-02",
+      "uf": "CE",
+      "lote": "02",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Ceará",
+      "empresa": "Maia Melo Engenharia LTDA",
+      "contrato": "03 00189/2023",
+      "rodovias": [
+        "BR-222",
+        "BR-402",
+        "BR-403"
+      ],
+      "qtd_rodovias": 3,
+      "extensao_total_km": 415.4,
+      "data_inicio": "2023-09-01",
+      "data_fim": "2026-09-01",
+      "periodo": "2023 – 2026",
+      "prazo_meses": 37,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 02/CE – BR-222; BR-402; BR-403",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 415,40 km nas rodovias BR-222; BR-402; BR-403, no Estado do Ceará. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-222",
+          "km_inicial": 0.0,
+          "km_final": 3.7,
+          "extensao_km": 3.7,
+          "snv_inicial": "222ACE3005",
+          "snv_final": "222ACE3005"
+        },
+        {
+          "rodovia": "BR-222",
+          "km_inicial": 122.6,
+          "km_final": 348.6,
+          "extensao_km": 226.0,
+          "snv_inicial": "222BCE0110",
+          "snv_final": "222BCE0230"
+        },
+        {
+          "rodovia": "BR-402",
+          "km_inicial": 175.6,
+          "km_final": 301.6,
+          "extensao_km": 126.0,
+          "snv_inicial": "402BCE0290",
+          "snv_final": "402BCE0360"
+        },
+        {
+          "rodovia": "BR-403",
+          "km_inicial": 0.0,
+          "km_final": 6.7,
+          "extensao_km": 6.7,
+          "snv_inicial": "403ACE1005",
+          "snv_final": "403ACE1005"
+        },
+        {
+          "rodovia": "BR-403",
+          "km_inicial": 0.0,
+          "km_final": 28.2,
+          "extensao_km": 28.2,
+          "snv_inicial": "403BCE0010",
+          "snv_final": "403BCE0025"
+        },
+        {
+          "rodovia": "BR-403",
+          "km_inicial": 125.0,
+          "km_final": 149.8,
+          "extensao_km": 24.8,
+          "snv_inicial": "403BCE0075",
+          "snv_final": "403BCE0075"
+        }
+      ]
+    },
+    {
+      "id": "CE-03",
+      "uf": "CE",
+      "lote": "03",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Ceará",
+      "empresa": "Maia Melo Engenharia LTDA",
+      "contrato": "03 00189/2023",
+      "rodovias": [
+        "BR-020",
+        "BR-226",
+        "BR-403",
+        "BR-404"
+      ],
+      "qtd_rodovias": 4,
+      "extensao_total_km": 568.1,
+      "data_inicio": "2023-09-01",
+      "data_fim": "2026-09-01",
+      "periodo": "2023 – 2026",
+      "prazo_meses": 37,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 03/CE – BR-020; BR-226; BR-403; BR-404",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 568,10 km nas rodovias BR-020; BR-226; BR-403; BR-404, no Estado do Ceará. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-226",
+          "km_inicial": 112.0,
+          "km_final": 114.8,
+          "extensao_km": 2.8,
+          "snv_inicial": "226BCE0545",
+          "snv_final": "226BCE0545"
+        },
+        {
+          "rodovia": "BR-226",
+          "km_inicial": 114.8,
+          "km_final": 335.4,
+          "extensao_km": 220.6,
+          "snv_inicial": "226BCE0550",
+          "snv_final": "226BCE0670"
+        },
+        {
+          "rodovia": "BR-020",
+          "km_inicial": 0.0,
+          "km_final": 308.8,
+          "extensao_km": 308.8,
+          "snv_inicial": "020BCE0510",
+          "snv_final": "020BCE0590"
+        },
+        {
+          "rodovia": "BR-403",
+          "km_inicial": 326.4,
+          "km_final": 328.8,
+          "extensao_km": 2.4,
+          "snv_inicial": "403BCE0200",
+          "snv_final": "403BCE0200"
+        },
+        {
+          "rodovia": "BR-404",
+          "km_inicial": 73.2,
+          "km_final": 106.7,
+          "extensao_km": 33.5,
+          "snv_inicial": "404BCE0090",
+          "snv_final": "404BCE0090"
+        }
+      ]
+    },
+    {
+      "id": "CE-04",
+      "uf": "CE",
+      "lote": "04",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Ceará",
+      "empresa": "Maia Melo Engenharia LTDA",
+      "contrato": "03 00189/2023",
+      "rodovias": [
+        "BR-116",
+        "BR-122",
+        "BR-304"
+      ],
+      "qtd_rodovias": 3,
+      "extensao_total_km": 477.1,
+      "data_inicio": "2023-09-01",
+      "data_fim": "2026-09-01",
+      "periodo": "2023 – 2026",
+      "prazo_meses": 37,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 04/CE – BR-116; BR-122; BR-304",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 477,10 km nas rodovias BR-116; BR-122; BR-304, no Estado do Ceará. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-116",
+          "km_inicial": 54.0,
+          "km_final": 280.9,
+          "extensao_km": 226.9,
+          "snv_inicial": "116BCE0090",
+          "snv_final": "116BCE0230"
+        },
+        {
+          "rodovia": "BR-122",
+          "km_inicial": 5.0,
+          "km_final": 154.4,
+          "extensao_km": 149.4,
+          "snv_inicial": "122BCE0020",
+          "snv_final": "122BCE0070"
+        },
+        {
+          "rodovia": "BR-304",
+          "km_inicial": 0.0,
+          "km_final": 100.8,
+          "extensao_km": 100.8,
+          "snv_inicial": "304BCE0010",
+          "snv_final": "304BCE0055"
+        }
+      ]
+    },
+    {
+      "id": "CE-05",
+      "uf": "CE",
+      "lote": "05",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Ceará",
+      "empresa": "Maia Melo Engenharia LTDA",
+      "contrato": "03 00189/2023",
+      "rodovias": [
+        "BR-116"
+      ],
+      "qtd_rodovias": 1,
+      "extensao_total_km": 267.3,
+      "data_inicio": "2023-09-01",
+      "data_fim": "2026-09-01",
+      "periodo": "2023 – 2026",
+      "prazo_meses": 37,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 05/CE – BR-116",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 267,30 km nas rodovias BR-116, no Estado do Ceará. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-116",
+          "km_inicial": 280.9,
+          "km_final": 548.2,
+          "extensao_km": 267.3,
+          "snv_inicial": "116BCE0240",
+          "snv_final": "116BCE0416"
+        }
+      ]
+    },
+    {
+      "id": "GO-01",
+      "uf": "GO",
+      "lote": "01",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Goiás",
+      "empresa": "Consórcio Engeplus/BECK",
+      "contrato": "12 00239/2024",
+      "rodovias": [
+        "BR-060",
+        "BR-070",
+        "BR-080",
+        "BR-414"
+      ],
+      "qtd_rodovias": 4,
+      "extensao_total_km": 394.6,
+      "data_inicio": "2024-05-02",
+      "data_fim": "2028-07-29",
+      "periodo": "2024 – 2028",
+      "prazo_meses": 51,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 01/GO – BR-060; BR-070; BR-080; BR-414",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 394,60 km nas rodovias BR-060; BR-070; BR-080; BR-414, no Estado de Goiás. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-060",
+          "km_inicial": 34.0,
+          "km_final": 50.9,
+          "extensao_km": 16.9,
+          "snv_inicial": "060NGO1030",
+          "snv_final": "060NGO1035"
+        },
+        {
+          "rodovia": "BR-070",
+          "km_inicial": 0.0,
+          "km_final": 65.5,
+          "extensao_km": 65.5,
+          "snv_inicial": "070BGO0070",
+          "snv_final": "070BGO0075"
+        },
+        {
+          "rodovia": "BR-070",
+          "km_inicial": 167.7,
+          "km_final": 289.7,
+          "extensao_km": 122.0,
+          "snv_inicial": "070BGO0115",
+          "snv_final": "070BGO0190"
+        },
+        {
+          "rodovia": "BR-080",
+          "km_inicial": 0.0,
+          "km_final": 94.3,
+          "extensao_km": 94.3,
+          "snv_inicial": "080BGO0090",
+          "snv_final": "080BGO0110"
+        },
+        {
+          "rodovia": "BR-414",
+          "km_inicial": 204.1,
+          "km_final": 300.0,
+          "extensao_km": 95.9,
+          "snv_inicial": "414BGO0083",
+          "snv_final": "414BGO0100"
+        }
+      ]
+    },
+    {
+      "id": "PE-01",
+      "uf": "PE",
+      "lote": "01",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Atualização de Projeto Executivo de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Pernambuco",
+      "empresa": "Maia Melo Engenharia LTDA",
+      "contrato": "04 00675/2023",
+      "rodovias": [
+        "BR-101",
+        "BR-408"
+      ],
+      "qtd_rodovias": 2,
+      "extensao_total_km": 297.7,
+      "data_inicio": "2023-12-20",
+      "data_fim": "2026-12-20",
+      "periodo": "2023 – 2026",
+      "prazo_meses": 37,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 01/PE – BR-101; BR-408",
+      "descricao": "Atualização de Projeto Executivo de Engenharia no âmbito do BR-LEGAL 2, contemplando 297,70 km nas rodovias BR-101; BR-408, no Estado de Pernambuco. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-101",
+          "km_inicial": 0.0,
+          "km_final": 213.9,
+          "extensao_km": 213.9,
+          "snv_inicial": "101BPE0350",
+          "snv_final": "101BPE0580"
+        },
+        {
+          "rodovia": "BR-408",
+          "km_inicial": 14.6,
+          "km_final": 98.4,
+          "extensao_km": 83.8,
+          "snv_inicial": "408BPE0110",
+          "snv_final": "408BPE0260"
+        }
+      ]
+    },
+    {
+      "id": "PE-02",
+      "uf": "PE",
+      "lote": "02",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Atualização de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Pernambuco",
+      "empresa": "Consórcio JBR/ASTEP",
+      "contrato": "04.00640/2023",
+      "rodovias": [
+        "BR-110",
+        "BR-232",
+        "BR-424"
+      ],
+      "qtd_rodovias": 3,
+      "extensao_total_km": 383.7,
+      "data_inicio": "2023-11-01",
+      "data_fim": "2027-02-01",
+      "periodo": "2023 – 2027",
+      "prazo_meses": 40,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 02/PE – BR-110; BR-232; BR-424",
+      "descricao": "Atualização de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 383,70 km nas rodovias BR-110; BR-232; BR-424, no Estado de Pernambuco. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-110",
+          "km_inicial": 94.3,
+          "km_final": 148.0,
+          "extensao_km": 53.7,
+          "snv_inicial": "110BPE0410",
+          "snv_final": "110BPE0410"
+        },
+        {
+          "rodovia": "BR-232",
+          "km_inicial": 212.5,
+          "km_final": 409.0,
+          "extensao_km": 196.5,
+          "snv_inicial": "232BPE0230",
+          "snv_final": "232BPE0350"
+        },
+        {
+          "rodovia": "BR-424",
+          "km_inicial": 0.0,
+          "km_final": 133.5,
+          "extensao_km": 133.5,
+          "snv_inicial": "424BPE0010",
+          "snv_final": "424BPE0115"
+        }
+      ]
+    },
+    {
+      "id": "PE-03",
+      "uf": "PE",
+      "lote": "03",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Atualização de Projeto Executivo de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Pernambuco",
+      "empresa": "Maia Melo Engenharia LTDA",
+      "contrato": "04 00675/2023",
+      "rodovias": [
+        "BR-104",
+        "BR-232",
+        "BR-423"
+      ],
+      "qtd_rodovias": 3,
+      "extensao_total_km": 407.4,
+      "data_inicio": "2023-12-20",
+      "data_fim": "2026-12-20",
+      "periodo": "2023 – 2026",
+      "prazo_meses": 37,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 03/PE – BR-104; BR-232; BR-423",
+      "descricao": "Atualização de Projeto Executivo de Engenharia no âmbito do BR-LEGAL 2, contemplando 407,40 km nas rodovias BR-104; BR-232; BR-423, no Estado de Pernambuco. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-104",
+          "km_inicial": 0.0,
+          "km_final": 19.8,
+          "extensao_km": 19.8,
+          "snv_inicial": "104BPE0330",
+          "snv_final": "104BPE0350"
+        },
+        {
+          "rodovia": "BR-104",
+          "km_inicial": 19.8,
+          "km_final": 71.6,
+          "extensao_km": 51.8,
+          "snv_inicial": "104BPE0370",
+          "snv_final": "104BPE0450"
+        },
+        {
+          "rodovia": "BR-104",
+          "km_inicial": 71.6,
+          "km_final": 146.9,
+          "extensao_km": 75.3,
+          "snv_inicial": "104BPE0450",
+          "snv_final": "104BPE0550"
+        },
+        {
+          "rodovia": "BR-232",
+          "km_inicial": 129.2,
+          "km_final": 211.7,
+          "extensao_km": 82.5,
+          "snv_inicial": "232BPE0150",
+          "snv_final": "232BPE0210"
+        },
+        {
+          "rodovia": "BR-423",
+          "km_inicial": 18.2,
+          "km_final": 196.2,
+          "extensao_km": 178.0,
+          "snv_inicial": "423BPE0030",
+          "snv_final": "423BPE0170"
+        }
+      ]
+    },
+    {
+      "id": "PR-01",
+      "uf": "PR",
+      "lote": "01",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Paraná",
+      "empresa": "Future Motion Brasil Serviços de Engenharia Consultiva LTDA",
+      "contrato": "SR/DNIT/PR-00160/2021-00",
+      "rodovias": [
+        "BR-153",
+        "BR-376",
+        "BR-476"
+      ],
+      "qtd_rodovias": 3,
+      "extensao_total_km": 362.1,
+      "data_inicio": "2021-05-18",
+      "data_fim": "2024-08-14",
+      "periodo": "2021 – 2024",
+      "prazo_meses": 39,
+      "status": "Encerrado",
+      "titulo": "BR-LEGAL 2 – Lote 01/PR – BR-153; BR-376; BR-476",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 362,10 km nas rodovias BR-153; BR-376; BR-476, no Estado do Paraná. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-153",
+          "km_inicial": 416.3,
+          "km_final": 523.8,
+          "extensao_km": 107.5,
+          "snv_inicial": "153BPR1448",
+          "snv_final": "153BPR1510"
+        },
+        {
+          "rodovia": "BR-376",
+          "km_inicial": 0.0,
+          "km_final": 4.5,
+          "extensao_km": 4.5,
+          "snv_inicial": "376APR2005",
+          "snv_final": "376APR2005"
+        },
+        {
+          "rodovia": "BR-476",
+          "km_inicial": 0.0,
+          "km_final": 122.4,
+          "extensao_km": 122.4,
+          "snv_inicial": "476BPR0030",
+          "snv_final": "476BPR0058"
+        },
+        {
+          "rodovia": "BR-476",
+          "km_inicial": 197.7,
+          "km_final": 325.4,
+          "extensao_km": 127.7,
+          "snv_inicial": "476BPR0110",
+          "snv_final": "476BPR0140"
+        }
+      ]
+    },
+    {
+      "id": "PR-02",
+      "uf": "PR",
+      "lote": "02",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Paraná",
+      "empresa": "Future Motion Brasil Serviços de Engenharia Consultiva LTDA",
+      "contrato": "SR/DNIT/PR-00160/2021-00",
+      "rodovias": [
+        "BR-158",
+        "BR-163",
+        "BR-272",
+        "BR-280",
+        "BR-373",
+        "BR-467",
+        "BR-469"
+      ],
+      "qtd_rodovias": 7,
+      "extensao_total_km": 469.3,
+      "data_inicio": "2021-05-18",
+      "data_fim": "2024-08-14",
+      "periodo": "2021 – 2024",
+      "prazo_meses": 39,
+      "status": "Encerrado",
+      "titulo": "BR-LEGAL 2 – Lote 02/PR – BR-158; BR-163; BR-272; BR-280; BR-373; BR-467; BR-469",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 469,30 km nas rodovias BR-158; BR-163; BR-272; BR-280; BR-373; BR-467; BR-469, no Estado do Paraná. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-158",
+          "km_inicial": 335.7,
+          "km_final": 405.4,
+          "extensao_km": 69.7,
+          "snv_inicial": "158BPR0920",
+          "snv_final": "158BPR0925"
+        },
+        {
+          "rodovia": "BR-158",
+          "km_inicial": 506.8,
+          "km_final": 543.8,
+          "extensao_km": 37.0,
+          "snv_inicial": "158BPR0970",
+          "snv_final": "158BPR0990"
+        },
+        {
+          "rodovia": "BR-163",
+          "km_inicial": 0.0,
+          "km_final": 123.7,
+          "extensao_km": 123.7,
+          "snv_inicial": "163BPR0030",
+          "snv_final": "163BPR0073"
+        },
+        {
+          "rodovia": "BR-272",
+          "km_inicial": 524.7,
+          "km_final": 570.0,
+          "extensao_km": 45.3,
+          "snv_inicial": "272BPR0560",
+          "snv_final": "272BPR0570"
+        },
+        {
+          "rodovia": "BR-280",
+          "km_inicial": 254.2,
+          "km_final": 317.2,
+          "extensao_km": 63.0,
+          "snv_inicial": "280BPR0330",
+          "snv_final": "280BPR0350"
+        },
+        {
+          "rodovia": "BR-373",
+          "km_inicial": 382.4,
+          "km_final": 481.0,
+          "extensao_km": 98.6,
+          "snv_inicial": "373BPR0450",
+          "snv_final": "373BPR0475"
+        },
+        {
+          "rodovia": "BR-467",
+          "km_inicial": 102.0,
+          "km_final": 111.6,
+          "extensao_km": 9.6,
+          "snv_inicial": "467BPR0060",
+          "snv_final": "467BPR0060"
+        },
+        {
+          "rodovia": "BR-469",
+          "km_inicial": 0.0,
+          "km_final": 2.1,
+          "extensao_km": 2.1,
+          "snv_inicial": "469APR1005",
+          "snv_final": "469APR1010"
+        },
+        {
+          "rodovia": "BR-469",
+          "km_inicial": 10.3,
+          "km_final": 30.6,
+          "extensao_km": 20.3,
+          "snv_inicial": "469BPR0030",
+          "snv_final": "469BPR0050"
+        }
+      ]
+    },
+    {
+      "id": "PR-03",
+      "uf": "PR",
+      "lote": "03",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Paraná",
+      "empresa": "Future Motion Brasil Serviços de Engenharia Consultiva LTDA",
+      "contrato": "SR/DNIT/PR-00160/2021-00",
+      "rodovias": [
+        "BR-272",
+        "BR-369",
+        "BR-376",
+        "BR-487"
+      ],
+      "qtd_rodovias": 4,
+      "extensao_total_km": 253.4,
+      "data_inicio": "2021-05-18",
+      "data_fim": "2024-08-14",
+      "periodo": "2021 – 2024",
+      "prazo_meses": 39,
+      "status": "Encerrado",
+      "titulo": "BR-LEGAL 2 – Lote 03/PR – BR-272; BR-369; BR-376; BR-487",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 253,40 km nas rodovias BR-272; BR-369; BR-376; BR-487, no Estado do Paraná. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-272",
+          "km_inicial": 368.5,
+          "km_final": 439.5,
+          "extensao_km": 71.0,
+          "snv_inicial": "272BPR0460",
+          "snv_final": "272BPR0500"
+        },
+        {
+          "rodovia": "BR-369",
+          "km_inicial": 51.8,
+          "km_final": 60.9,
+          "extensao_km": 9.1,
+          "snv_inicial": "369BPR0505",
+          "snv_final": "369BPR0520"
+        },
+        {
+          "rodovia": "BR-369",
+          "km_inicial": 133.6,
+          "km_final": 143.1,
+          "extensao_km": 9.5,
+          "snv_inicial": "369BPR0600",
+          "snv_final": "369BPR0610"
+        },
+        {
+          "rodovia": "BR-369",
+          "km_inicial": 167.7,
+          "km_final": 178.7,
+          "extensao_km": 11.0,
+          "snv_inicial": "369BPR0660",
+          "snv_final": "369BPR0665"
+        },
+        {
+          "rodovia": "BR-369",
+          "km_inicial": 200.8,
+          "km_final": 211.3,
+          "extensao_km": 10.5,
+          "snv_inicial": "369BPR0690",
+          "snv_final": "369BPR0695"
+        },
+        {
+          "rodovia": "BR-369",
+          "km_inicial": 228.7,
+          "km_final": 250.5,
+          "extensao_km": 21.8,
+          "snv_inicial": "369BPR0725",
+          "snv_final": "369BPR0738"
+        },
+        {
+          "rodovia": "BR-369",
+          "km_inicial": 0.0,
+          "km_final": 4.4,
+          "extensao_km": 4.4,
+          "snv_inicial": "369APR1005",
+          "snv_final": "369APR1005"
+        },
+        {
+          "rodovia": "BR-376",
+          "km_inicial": 0.0,
+          "km_final": 5.3,
+          "extensao_km": 5.3,
+          "snv_inicial": "376APR1005",
+          "snv_final": "376APR1005"
+        },
+        {
+          "rodovia": "BR-376",
+          "km_inicial": 1.5,
+          "km_final": 8.6,
+          "extensao_km": 7.1,
+          "snv_inicial": "376UPR2010",
+          "snv_final": "376UPR2010"
+        },
+        {
+          "rodovia": "BR-376",
+          "km_inicial": 29.6,
+          "km_final": 35.5,
+          "extensao_km": 5.9,
+          "snv_inicial": "376BPR0145",
+          "snv_final": "376BPR0145"
+        },
+        {
+          "rodovia": "BR-376",
+          "km_inicial": 171.6,
+          "km_final": 180.9,
+          "extensao_km": 9.3,
+          "snv_inicial": "376BPR0206",
+          "snv_final": "376BPR0207"
+        },
+        {
+          "rodovia": "BR-376",
+          "km_inicial": 189.0,
+          "km_final": 195.4,
+          "extensao_km": 6.4,
+          "snv_inicial": "376BPR0215",
+          "snv_final": "376BPR0215"
+        },
+        {
+          "rodovia": "BR-487",
+          "km_inicial": 106.8,
+          "km_final": 179.3,
+          "extensao_km": 72.6,
+          "snv_inicial": "487BPR0150",
+          "snv_final": "487BPR0158"
+        },
+        {
+          "rodovia": "BR-487",
+          "km_inicial": 0.0,
+          "km_final": 9.5,
+          "extensao_km": 9.5,
+          "snv_inicial": "487BPR0070",
+          "snv_final": "487BPR0070"
+        }
+      ]
+    },
+    {
+      "id": "PR-04",
+      "uf": "PR",
+      "lote": "04",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado do Paraná",
+      "empresa": "Future Motion Brasil Serviços de Engenharia Consultiva LTDA",
+      "contrato": "SR/DNIT/PR-00160/2021-00",
+      "rodovias": [
+        "BR-153"
+      ],
+      "qtd_rodovias": 1,
+      "extensao_total_km": 313.6,
+      "data_inicio": "2021-05-18",
+      "data_fim": "2024-08-14",
+      "periodo": "2021 – 2024",
+      "prazo_meses": 39,
+      "status": "Encerrado",
+      "titulo": "BR-LEGAL 2 – Lote 04/PR – BR-153",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 313,60 km nas rodovias BR-153, no Estado do Paraná. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-153",
+          "km_inicial": 0.0,
+          "km_final": 5.7,
+          "extensao_km": 5.7,
+          "snv_inicial": "153APR1005",
+          "snv_final": "153APR1005"
+        },
+        {
+          "rodovia": "BR-153",
+          "km_inicial": 0.0,
+          "km_final": 4.3,
+          "extensao_km": 4.3,
+          "snv_inicial": "153APR2005",
+          "snv_final": "153APR2005"
+        },
+        {
+          "rodovia": "BR-153",
+          "km_inicial": 52.5,
+          "km_final": 245.8,
+          "extensao_km": 193.3,
+          "snv_inicial": "153BPR1270",
+          "snv_final": "153BPR1350"
+        },
+        {
+          "rodovia": "BR-153",
+          "km_inicial": 306.0,
+          "km_final": 416.3,
+          "extensao_km": 110.3,
+          "snv_inicial": "153BPR1410",
+          "snv_final": "153BPR1445"
+        }
+      ]
+    },
+    {
+      "id": "RO-04",
+      "uf": "RO",
+      "lote": "04",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Rondônia",
+      "empresa": "Concremat - Engenharia e Tecnologia",
+      "contrato": "00240/2022",
+      "rodovias": [
+        "BR-319",
+        "BR-364",
+        "BR-425"
+      ],
+      "qtd_rodovias": 3,
+      "extensao_total_km": 171.6,
+      "data_inicio": "2022-06-08",
+      "data_fim": "2025-12-08",
+      "periodo": "2022 – 2025",
+      "prazo_meses": 43,
+      "status": "Encerrado",
+      "titulo": "BR-LEGAL 2 – Lote 04/RO – BR-319; BR-364; BR-425",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 171,60 km nas rodovias BR-319; BR-364; BR-425, no Estado de Rondônia. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-364",
+          "km_inicial": 690.7,
+          "km_final": 724.1,
+          "extensao_km": 33.4,
+          "snv_inicial": "364BRO1380",
+          "snv_final": "364BRO1425"
+        },
+        {
+          "rodovia": "BR-319",
+          "km_inicial": 136.7,
+          "km_final": 144.9,
+          "extensao_km": 8.2,
+          "snv_inicial": "319BRO0330",
+          "snv_final": "319BRO0350"
+        },
+        {
+          "rodovia": "BR-425",
+          "km_inicial": 0.0,
+          "km_final": 130.0,
+          "extensao_km": 130.0,
+          "snv_inicial": "425BRO0020",
+          "snv_final": "425BRO0060"
+        }
+      ]
+    },
+    {
+      "id": "SC-78A",
+      "uf": "SC",
+      "lote": "78A",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Santa Catarina",
+      "empresa": "Prosul Projetos Supervisão e Planejamento Ltda",
+      "contrato": "SR/DNIT/SC-16 00550/2024",
+      "rodovias": [
+        "BR-282"
+      ],
+      "qtd_rodovias": 1,
+      "extensao_total_km": 211.8,
+      "data_inicio": "2024-08-21",
+      "data_fim": "2025-02-21",
+      "periodo": "2024 – 2025",
+      "prazo_meses": 7,
+      "status": "Encerrado",
+      "titulo": "BR-LEGAL 2 – Lote 78A/SC – BR-282",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 211,80 km nas rodovias BR-282, no Estado de Santa Catarina. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-282",
+          "km_inicial": 114.0,
+          "km_final": 325.8,
+          "extensao_km": 211.8,
+          "snv_inicial": "282BSC0095",
+          "snv_final": "282BSC0228"
+        }
+      ]
+    },
+    {
+      "id": "SC-78B",
+      "uf": "SC",
+      "lote": "78B",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Elaboração de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Santa Catarina",
+      "empresa": "Prosul Projetos Supervisão e Planejamento Ltda",
+      "contrato": "SR/DNIT/SC-16 00550/2024",
+      "rodovias": [
+        "BR-282"
+      ],
+      "qtd_rodovias": 1,
+      "extensao_total_km": 103.9,
+      "data_inicio": "2024-08-21",
+      "data_fim": "2025-02-21",
+      "periodo": "2024 – 2025",
+      "prazo_meses": 7,
+      "status": "Encerrado",
+      "titulo": "BR-LEGAL 2 – Lote 78B/SC – BR-282",
+      "descricao": "Elaboração de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 103,90 km nas rodovias BR-282, no Estado de Santa Catarina. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-282",
+          "km_inicial": 0.0,
+          "km_final": 5.4,
+          "extensao_km": 5.4,
+          "snv_inicial": "282BSC0010",
+          "snv_final": "282BSC0010"
+        },
+        {
+          "rodovia": "BR-282",
+          "km_inicial": 15.5,
+          "km_final": 114.0,
+          "extensao_km": 98.5,
+          "snv_inicial": "282BSC0030",
+          "snv_final": "282BSC0090"
+        }
+      ]
+    },
+    {
+      "id": "PE-04",
+      "uf": "PE",
+      "lote": "04",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Atualização de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Pernambuco",
+      "empresa": "Consórcio JBR/ASTEP",
+      "contrato": "04.00640/2023",
+      "rodovias": [
+        "BR-110",
+        "BR-116",
+        "BR-232",
+        "BR-316"
+      ],
+      "qtd_rodovias": 4,
+      "extensao_total_km": 583.5,
+      "data_inicio": "2023-11-01",
+      "data_fim": "2027-02-01",
+      "periodo": "2023 – 2027",
+      "prazo_meses": 40,
+      "status": "Em andamento",
+      "titulo": "BR-LEGAL 2 – Lote 04/PE – BR-110; BR-116; BR-232; BR-316",
+      "descricao": "Atualização de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 583,50 km nas rodovias BR-110; BR-116; BR-232; BR-316, no Estado de Pernambuco. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-110",
+          "km_inicial": 219.1,
+          "km_final": 260.2,
+          "extensao_km": 41.1,
+          "snv_inicial": "110BPE0470",
+          "snv_final": "110BPE0520"
+        },
+        {
+          "rodovia": "BR-116",
+          "km_inicial": 0.0,
+          "km_final": 91.6,
+          "extensao_km": 91.6,
+          "snv_inicial": "116BPE0430",
+          "snv_final": "116BPE0470"
+        },
+        {
+          "rodovia": "BR-232",
+          "km_inicial": 0.0,
+          "km_final": 3.6,
+          "extensao_km": 3.6,
+          "snv_inicial": "232APE1005",
+          "snv_final": "232APE1005"
+        },
+        {
+          "rodovia": "BR-232",
+          "km_inicial": 409.0,
+          "km_final": 560.1,
+          "extensao_km": 151.1,
+          "snv_inicial": "232BPE0360",
+          "snv_final": "232BPE0450"
+        },
+        {
+          "rodovia": "BR-316",
+          "km_inicial": 0.0,
+          "km_final": 144.9,
+          "extensao_km": 144.9,
+          "snv_inicial": "316BPE0570",
+          "snv_final": "316BPE0660"
+        },
+        {
+          "rodovia": "BR-316",
+          "km_inicial": 218.3,
+          "km_final": 369.5,
+          "extensao_km": 151.2,
+          "snv_inicial": "316BPE0710",
+          "snv_final": "316BPE0750"
+        }
+      ]
+    },
+    {
+      "id": "PE-05",
+      "uf": "PE",
+      "lote": "05",
+      "programa": "BR-LEGAL 2",
+      "tipo_servico": "Atualização de Projeto Básico de Engenharia",
+      "cliente": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
+      "fiscalizacao": "Superintendência Regional do DNIT no Estado de Pernambuco",
+      "empresa": "Consórcio JBR/ASTEP",
+      "contrato": "04.00640/2023",
+      "rodovias": [
+        "BR-407",
+        "BR-428"
+      ],
+      "qtd_rodovias": 2,
+      "extensao_total_km": 323.9,
+      "data_inicio": null,
+      "data_fim": null,
+      "periodo": "Não informado",
+      "prazo_meses": null,
+      "status": "Não informado",
+      "titulo": "BR-LEGAL 2 – Lote 05/PE – BR-407; BR-428",
+      "descricao": "Atualização de Projeto Básico de Engenharia no âmbito do BR-LEGAL 2, contemplando 323,90 km nas rodovias BR-407; BR-428, no Estado de Pernambuco. O serviço abrange a consolidação dos segmentos rodoviários, identificação dos códigos SNV, estudos preliminares e suporte técnico para projetos de sinalização rodoviária e dispositivos de segurança.",
+      "segmentos": [
+        {
+          "rodovia": "BR-407",
+          "km_inicial": 0.0,
+          "km_final": 130.1,
+          "extensao_km": 130.1,
+          "snv_inicial": "407BPE0210",
+          "snv_final": "407BPE0270"
+        },
+        {
+          "rodovia": "BR-428",
+          "km_inicial": 0.0,
+          "km_final": 193.8,
+          "extensao_km": 193.8,
+          "snv_inicial": "428BPE0010",
+          "snv_final": "428BPE0060"
+        }
+      ]
+    }
+  ]
+}
