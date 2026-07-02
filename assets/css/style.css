@@ -810,6 +810,19 @@ button, .btn {
 }
 .irap-highlight strong { color: var(--text); font-weight: 600; }
 
+.irap-atuacao-figure {
+  margin: 32px 0 0;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 48px -28px rgba(23, 32, 43, 0.22);
+}
+.irap-atuacao-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 @media (max-width: 900px) {
   .irap-grid { grid-template-columns: 1fr; }
   .irap-side { position: static; }
