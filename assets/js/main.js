@@ -108,12 +108,10 @@ function renderStats(resumo) {
 
 function renderPortfolioCards(lotes) {
   const grid = document.getElementById('cardGrid');
-  const statusClass = s => s === 'Encerrado' ? 'done' : (s === 'Em andamento' ? 'progress' : 'unknown');
   grid.innerHTML = lotes.map(l => `
     <div class="project-card">
       <div class="card-top">
         <span class="code">${l.uf} · Lote ${l.lote}</span>
-        <span class="status-pill ${statusClass(l.status)}">${l.status}</span>
       </div>
       <p class="card-title">${l.rodovias.join(' · ')}</p>
       <p class="trecho">${l.tipo_servico} — ${l.programa}</p>
@@ -209,7 +207,6 @@ function selectRodovia(feature, layer) {
         <div class="lote-card">
           <div class="lote-head">
             <span class="lote-id">${lote.uf} · Lote ${lote.lote}</span>
-            <span class="status-pill ${lote.status === 'Encerrado' ? 'done' : 'progress'}">${lote.status}</span>
           </div>
           <div class="data-row"><span class="k">Extensão nesta BR</span><span class="v">${extSeg ? extSeg.toLocaleString('pt-BR', {maximumFractionDigits:1}) + ' km' : '—'}</span></div>
           <div class="data-row"><span class="k">Extensão total do lote</span><span class="v">${lote.extensao_total_km.toLocaleString('pt-BR')} km</span></div>
