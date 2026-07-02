@@ -86,10 +86,6 @@ function renderLegend(lotes) {
 
 function renderStats(resumo) {
   const map = {
-    statLotes: resumo.total_lotes,
-    statKm: resumo.extensao_total_km,
-    statEstados: resumo.total_estados,
-    statEmpresas: resumo.total_empresas,
     statLotesHero: resumo.total_lotes,
     statKmHero: Math.round(resumo.extensao_total_km),
     statEstadosHero: resumo.total_estados,
@@ -261,8 +257,7 @@ function selectTrecho(feature, layer) {
    MARQUEE DE PARCEIROS (scroll horizontal automático)
    ============================================================ */
 (function setupMarquee() {
-  const track = document.querySelector('.marquee-track');
-  if (!track) return;
-  // duplica o conteúdo para permitir loop contínuo
-  track.innerHTML += track.innerHTML;
+  document.querySelectorAll('.marquee-track').forEach(track => {
+    track.innerHTML += track.innerHTML;
+  });
 })();
