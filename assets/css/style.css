@@ -454,7 +454,7 @@ button, .btn {
 
 .map-legend {
   display: flex;
-  gap: 22px;
+  gap: 16px 22px;
   margin-top: 18px;
   flex-wrap: wrap;
   font-family: var(--font-mono);
@@ -462,9 +462,8 @@ button, .btn {
   color: var(--text-dim);
 }
 .map-legend span { display: inline-flex; align-items: center; gap: 8px; }
-.map-legend i { width: 18px; height: 3px; display: inline-block; border-radius: 2px; }
+.map-legend i { width: 18px; height: 3px; display: inline-block; border-radius: 2px; flex: none; }
 .leg-base { background: var(--map-line-base); }
-.leg-highlight { background: var(--yellow-btn); }
 
 @media (max-width: 900px) {
   .map-layout { grid-template-columns: 1fr; }

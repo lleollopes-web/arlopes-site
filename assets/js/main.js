@@ -65,28 +65,23 @@ function observeCounters() {
    DADOS DE PROJETOS (planilha real)
    ============================================================ */
 let lotes = [];
-let rodoviaIndex = {};      // codigo_br -> [ {lote, segmentos} ]
 
 fetch('data/projetos.json')
   .then(r => r.json())
   .then(data => {
     lotes = data.lotes;
-    buildRodoviaIndex();
     renderStats(data.resumo);
     renderPortfolioCards(lotes);
-    initMap(); // só inicializa o mapa depois de termos o índice de rodovias
+    renderLegend(lotes);
+    initMap();
   })
   .catch(err => console.error('Erro ao carregar projetos.json', err));
 
-function buildRodoviaIndex() {
-  lotes.forEach(lote => {
-    lote.rodovias.forEach(codigoCompleto => {
-      const codigo = codigoCompleto.replace('BR-', '').trim();
-      if (!rodoviaIndex[codigo]) rodoviaIndex[codigo] = [];
-      const segmentosDaRodovia = lote.segmentos.filter(s => s.rodovia === codigoCompleto || s.rodovia === 'BR-' + codigo);
-      rodoviaIndex[codigo].push({ lote, segmentos: segmentosDaRodovia });
-    });
-  });
+function renderLegend(lotes) {
+  const legend = document.getElementById('mapLegend');
+  const ufs = [...new Set(lotes.map(l => l.uf))].sort();
+  const extra = ufs.map(uf => `<span><i style="background:${corDoUF(uf)}"></i> ${uf} — ${UF_NOMES[uf] || ''}</span>`).join('');
+  legend.insertAdjacentHTML('beforeend', extra);
 }
 
 function renderStats(resumo) {
@@ -127,7 +122,24 @@ function renderPortfolioCards(lotes) {
 /* ============================================================
    MAPA (Leaflet)
    ============================================================ */
-let map, geojsonLayer, activeLayer = null;
+let map, activeLayer = null;
+
+// Paleta de cores por estado (UF) — uma cor fixa por estado atendido
+const UF_COLORS = {
+  AC: '#c9862e',
+  AP: '#2f6f9e',
+  CE: '#1c9169',
+  GO: '#a1543a',
+  PE: '#6b4fa0',
+  PR: '#b3392f',
+  RO: '#4d7c3a',
+  SC: '#8a6d1f',
+};
+const UF_NOMES = {
+  AC: 'Acre', AP: 'Amapá', CE: 'Ceará', GO: 'Goiás',
+  PE: 'Pernambuco', PR: 'Paraná', RO: 'Rondônia', SC: 'Santa Catarina',
+};
+function corDoUF(uf) { return UF_COLORS[uf] || '#c9862e'; }
 
 function initMap() {
   map = L.map('map', {
@@ -144,85 +156,85 @@ function initMap() {
   map.on('focus', () => map.scrollWheelZoom.enable());
   map.on('blur', () => map.scrollWheelZoom.disable());
 
+  // 1) Malha federal completa, de fundo, em cinza neutro (contexto)
   fetch('data/rodovias.geojson')
     .then(r => r.json())
     .then(geojson => {
-      geojsonLayer = L.geoJSON(geojson, {
-        style: feature => styleFor(feature),
+      L.geoJSON(geojson, {
+        style: () => ({ color: '#a7ada6', weight: 1.2, opacity: 0.55 }),
         onEachFeature: (feature, layer) => {
-          layer.on('click', () => selectRodovia(feature, layer));
-          layer.on('mouseover', () => {
-            if (layer !== activeLayer) layer.setStyle({ color: '#1d2022', weight: 3.5, opacity: 1 });
-          });
-          layer.on('mouseout', () => {
-            if (layer !== activeLayer) layer.setStyle(styleFor(feature));
-          });
+          layer.on('click', () => selectVazio(feature, layer));
         }
       }).addTo(map);
     })
     .catch(err => console.error('Erro ao carregar rodovias.geojson', err));
+
+  // 2) Trechos realmente executados, recortados por SNV, coloridos por UF
+  fetch('data/trechos-executados.geojson')
+    .then(r => r.json())
+    .then(geojson => {
+      L.geoJSON(geojson, {
+        style: feature => ({
+          color: corDoUF(feature.properties.uf),
+          weight: 4,
+          opacity: 0.95,
+          dashArray: '10 6',
+        }),
+        onEachFeature: (feature, layer) => {
+          layer.on('click', () => selectTrecho(feature, layer));
+          layer.on('mouseover', () => layer.setStyle({ weight: 6, opacity: 1 }));
+          layer.on('mouseout', () => { if (layer !== activeLayer) layer.setStyle({ weight: 4, opacity: 0.95 }); });
+        }
+      }).addTo(map);
+    })
+    .catch(err => console.error('Erro ao carregar trechos-executados.geojson', err));
 }
 
-function styleFor(feature) {
-  const codigo = feature.properties.Codigo_BR;
-  const temProjeto = !!rodoviaIndex[codigo];
-  return {
-    color: temProjeto ? '#e8ab3d' : '#8f958f',
-    weight: temProjeto ? 3 : 1.4,
-    opacity: temProjeto ? 0.95 : 0.55,
-    dashArray: temProjeto ? '10 6' : null,
-  };
+function resetActive() {
+  if (activeLayer) activeLayer.setStyle({ weight: 4, opacity: 0.95 });
+  activeLayer = null;
 }
 
-function selectRodovia(feature, layer) {
-  const codigo = feature.properties.Codigo_BR;
-  const projetos = rodoviaIndex[codigo] || [];
-
-  if (activeLayer) geojsonLayer.resetStyle(activeLayer);
-  activeLayer = layer;
-  layer.setStyle({ color: '#1d2022', weight: 4, opacity: 1 });
-  layer.bringToFront();
-
+function selectVazio(feature, layer) {
+  resetActive();
   document.getElementById('panelEmpty').style.display = 'none';
   const content = document.getElementById('panelContent');
   content.style.display = 'block';
-
-  document.getElementById('pBR').textContent = 'BR-' + codigo;
+  document.getElementById('pBR').textContent = 'BR-' + feature.properties.Codigo_BR;
   document.getElementById('pUF').textContent = feature.properties.uf_list || '—';
+  document.getElementById('pLotesList').innerHTML = `
+    <div class="lote-empty">
+      <p>Ainda não temos projeto executado neste trecho.</p>
+      <span>${feature.properties.extensao_km ? Math.round(feature.properties.extensao_km) + ' km na malha federal' : ''}</span>
+    </div>`;
+}
 
-  const list = document.getElementById('pLotesList');
+function selectTrecho(feature, layer) {
+  resetActive();
+  activeLayer = layer;
+  layer.setStyle({ weight: 6, opacity: 1 });
+  layer.bringToFront();
 
-  if (projetos.length === 0) {
-    list.innerHTML = `
-      <div class="lote-empty">
-        <p>Ainda não temos projeto executado neste trecho.</p>
-        <span>${feature.properties.extensao_km ? Math.round(feature.properties.extensao_km) + ' km na malha federal' : ''}</span>
-      </div>`;
-  } else {
-    list.innerHTML = `
-      <div class="lote-count">${projetos.length} projeto${projetos.length > 1 ? 's' : ''} nesta rodovia</div>
-      ` + projetos.map(({ lote, segmentos }) => {
-        const extSeg = segmentos.reduce((sum, s) => sum + (s.extensao_km || 0), 0);
-        return `
-        <div class="lote-card">
-          <div class="lote-head">
-            <span class="lote-id">${lote.uf} · Lote ${lote.lote}</span>
-          </div>
-          <div class="data-row"><span class="k">Extensão nesta BR</span><span class="v">${extSeg ? extSeg.toLocaleString('pt-BR', {maximumFractionDigits:1}) + ' km' : '—'}</span></div>
-          <div class="data-row"><span class="k">Extensão total do lote</span><span class="v">${lote.extensao_total_km.toLocaleString('pt-BR')} km</span></div>
-          <div class="data-row"><span class="k">Período</span><span class="v">${lote.periodo}</span></div>
-          <div class="data-row"><span class="k">Empresa</span><span class="v">${lote.empresa}</span></div>
-          <div class="data-row"><span class="k">Serviço</span><span class="v">${lote.tipo_servico}</span></div>
-          <div class="data-row"><span class="k">Programa</span><span class="v">${lote.programa}</span></div>
-        </div>`;
-      }).join('');
-  }
+  const p = feature.properties;
+  document.getElementById('panelEmpty').style.display = 'none';
+  const content = document.getElementById('panelContent');
+  content.style.display = 'block';
+  document.getElementById('pBR').textContent = p.rodovia;
+  document.getElementById('pUF').textContent = `${p.uf} — ${UF_NOMES[p.uf] || ''}`;
 
-  const popupHtml = `
-    <span class="popup-br">BR-${codigo}</span>
-    ${projetos.length ? projetos.length + ' projeto(s) executado(s) nesta rodovia' : 'Sem projeto executado por nós neste trecho.'}
-  `;
-  layer.bindPopup(popupHtml).openPopup();
+  document.getElementById('pLotesList').innerHTML = `
+    <div class="lote-card" style="border-left:4px solid ${corDoUF(p.uf)};">
+      <div class="lote-head">
+        <span class="lote-id">${p.uf} · ${p.lote_id}</span>
+      </div>
+      <div class="data-row"><span class="k">Extensão do trecho</span><span class="v">${p.extensao_km ? p.extensao_km.toLocaleString('pt-BR', {maximumFractionDigits:1}) + ' km' : '—'}</span></div>
+      <div class="data-row"><span class="k">Período</span><span class="v">${p.periodo}</span></div>
+      <div class="data-row"><span class="k">Empresa</span><span class="v">${p.empresa}</span></div>
+      <div class="data-row"><span class="k">Serviço</span><span class="v">${p.tipo_servico}</span></div>
+      <div class="data-row"><span class="k">Programa</span><span class="v">${p.programa}</span></div>
+    </div>`;
+
+  layer.bindPopup(`<span class="popup-br">${p.rodovia}</span>${p.uf} · ${p.lote_id}`).openPopup();
 }
 
 /* ============================================================
