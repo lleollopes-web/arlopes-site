@@ -171,7 +171,7 @@ function initMap() {
     .then(r => r.json())
     .then(geojson => {
       L.geoJSON(geojson, {
-        style: () => ({ color: '#a7ada6', weight: 1.2, opacity: 0.55 }),
+        style: () => ({ color: '#a3aab1', weight: 1.2, opacity: 0.55 }),
         onEachFeature: (feature, layer) => {
           layer.on('click', () => selectVazio(feature, layer));
         }
