@@ -82,20 +82,20 @@
 <section class="stats">
   <div class="wrap">
     <div class="stat">
-      <div class="num" data-count="167" data-suffix="">0</div>
-      <div class="label">Rodovias federais mapeadas</div>
+      <div class="num" id="statLotes" data-count="0">0</div>
+      <div class="label">Lotes/projetos executados</div>
     </div>
     <div class="stat">
-      <div class="num" data-count="27" data-suffix="">0</div>
-      <div class="label">Estados na malha SNV/DNIT</div>
-    </div>
-    <div class="stat" id="statProjetos">
-      <div class="num" data-count="5" data-suffix="">0</div>
-      <div class="label">Projetos em destaque *</div>
+      <div class="num" id="statKm" data-count="0" data-decimals="0">0</div>
+      <div class="label">Km em projetos de sinalização</div>
     </div>
     <div class="stat">
-      <div class="num" data-count="948" data-suffix="">0</div>
-      <div class="label">Km em projetos executados *</div>
+      <div class="num" id="statEstados" data-count="0">0</div>
+      <div class="label">Estados atendidos</div>
+    </div>
+    <div class="stat">
+      <div class="num" id="statEmpresas" data-count="0">0</div>
+      <div class="label">Empresas/consórcios parceiros</div>
     </div>
   </div>
 </section>
@@ -124,14 +124,7 @@
           <span class="panel-eyebrow">Rodovia federal</span>
           <h3 id="pBR">BR-000</h3>
           <span class="uf-tag" id="pUF">UF</span>
-
-          <div class="data-row"><span class="k">Trecho</span><span class="v" id="pTrecho">—</span></div>
-          <div class="data-row"><span class="k">Extensão do projeto</span><span class="v" id="pExtensao">—</span></div>
-          <div class="data-row"><span class="k">Período</span><span class="v" id="pPeriodo">—</span></div>
-          <div class="data-row"><span class="k">Empresa contratada</span><span class="v" id="pEmpresa">—</span></div>
-          <div class="data-row"><span class="k">Serviço</span><span class="v" id="pServico">—</span></div>
-          <div class="data-row"><span class="k">Programa</span><span class="v" id="pPrograma">—</span></div>
-          <span class="status-pill" id="pStatus">Status</span>
+          <div id="pLotesList"></div>
         </div>
       </aside>
     </div>
@@ -141,7 +134,7 @@
       <span><i class="leg-highlight"></i> Trechos com projeto executado</span>
     </div>
     <p style="font-family:var(--font-mono); font-size:0.72rem; color:var(--text-faint); margin-top:14px;">
-      * Dados de exemplo ilustrando o funcionamento do mapa — serão substituídos pela planilha real de projetos.
+      Uma mesma rodovia pode ter mais de um lote/projeto — o painel lateral lista todos.
     </p>
   </div>
 </section>
@@ -156,10 +149,35 @@
       <h2>Projetos executados</h2>
       <p>Um retrato dos trabalhos de sinalização já entregues pela nossa equipe em rodovias federais.</p>
     </div>
-    <span class="demo-note reveal">⚠ Cards abaixo com dados de exemplo — aguardando planilha oficial de projetos.</span>
+    <span class="demo-note reveal">22 lotes de projeto em 8 estados — BR-LEGAL e BR-LEGAL 2 / DNIT.</span>
     <div class="card-grid reveal" id="cardGrid"></div>
   </div>
 </section>
+
+<!-- ===================== PARCEIROS ===================== -->
+<section class="section partners-section">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:32px;">
+      <span class="eyebrow">Parceiros e consórcios</span>
+      <h2 style="font-size:1.4rem;">Empresas com quem já trabalhamos</h2>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="marquee-item"><img src="assets/img/parceiros/maiamelo.jpg" alt="Maia Melo Engenharia"></div>
+      <div class="marquee-item"><img src="assets/img/parceiros/jbr.jpg" alt="JBR Engenharia"></div>
+      <div class="marquee-item"><img src="assets/img/parceiros/astep.jpg" alt="Astep"></div>
+      <div class="marquee-item"><img src="assets/img/parceiros/engeplus.jpg" alt="Engeplus Engenharia e Consultoria"></div>
+      <div class="marquee-item"><img src="assets/img/parceiros/beck.jpg" alt="Beck de Souza Engenharia"></div>
+      <div class="marquee-item"><img src="assets/img/parceiros/scb.jpg" alt="SCB BIM & GIS"></div>
+      <div class="marquee-item"><img src="assets/img/parceiros/modera.jpg" alt="Modera Engenharia"></div>
+      <div class="marquee-item"><img src="assets/img/parceiros/simemp.jpg" alt="Simemp"></div>
+      <div class="marquee-item"><img src="assets/img/parceiros/ste.jpg" alt="STE Serviços Técnicos de Engenharia"></div>
+    </div>
+  </div>
+</section>
+
+<div class="lane-divider"></div>
 
 <!-- ===================== SOBRE NÓS ===================== -->
 <section class="section" id="sobre">
