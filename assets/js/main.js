@@ -103,10 +103,12 @@ function renderStats(resumo) {
 
 function renderPortfolioCards(lotes) {
   const grid = document.getElementById('cardGrid');
-  grid.innerHTML = lotes.map(l => `
-    <div class="project-card">
+  grid.innerHTML = lotes.map(l => {
+    const cor = corDoUF(l.uf);
+    return `
+    <div class="project-card" style="border-left:4px solid ${cor};">
       <div class="card-top">
-        <span class="code">${l.uf} · Lote ${l.lote}</span>
+        <span class="code" style="color:${cor};">${l.uf} · Lote ${l.lote}</span>
       </div>
       <p class="card-title">${l.rodovias.join(' · ')}</p>
       <p class="trecho">${l.tipo_servico} — ${l.programa}</p>
@@ -116,7 +118,8 @@ function renderPortfolioCards(lotes) {
         <span>${l.empresa}</span>
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 }
 
 /* ============================================================
@@ -140,6 +143,13 @@ const UF_NOMES = {
   PE: 'Pernambuco', PR: 'Paraná', RO: 'Rondônia', SC: 'Santa Catarina',
 };
 function corDoUF(uf) { return UF_COLORS[uf] || '#c9862e'; }
+function hexToRgba(hex, alpha) {
+  const h = hex.replace('#', '');
+  const r = parseInt(h.substring(0, 2), 16);
+  const g = parseInt(h.substring(2, 4), 16);
+  const b = parseInt(h.substring(4, 6), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
 
 function initMap() {
   map = L.map('map', {
@@ -201,7 +211,11 @@ function selectVazio(feature, layer) {
   const content = document.getElementById('panelContent');
   content.style.display = 'block';
   document.getElementById('pBR').textContent = 'BR-' + feature.properties.Codigo_BR;
+  document.getElementById('pBR').style.color = '';
   document.getElementById('pUF').textContent = feature.properties.uf_list || '—';
+  const header = document.getElementById('panelHeader');
+  header.style.background = '';
+  header.style.borderLeftColor = 'transparent';
   document.getElementById('pLotesList').innerHTML = `
     <div class="lote-empty">
       <p>Ainda não temos projeto executado neste trecho.</p>
@@ -216,16 +230,22 @@ function selectTrecho(feature, layer) {
   layer.bringToFront();
 
   const p = feature.properties;
+  const cor = corDoUF(p.uf);
   document.getElementById('panelEmpty').style.display = 'none';
   const content = document.getElementById('panelContent');
   content.style.display = 'block';
   document.getElementById('pBR').textContent = p.rodovia;
+  document.getElementById('pBR').style.color = cor;
   document.getElementById('pUF').textContent = `${p.uf} — ${UF_NOMES[p.uf] || ''}`;
 
+  const header = document.getElementById('panelHeader');
+  header.style.background = hexToRgba(cor, 0.12);
+  header.style.borderLeftColor = cor;
+
   document.getElementById('pLotesList').innerHTML = `
-    <div class="lote-card" style="border-left:4px solid ${corDoUF(p.uf)};">
+    <div class="lote-card" style="border-left:4px solid ${cor};">
       <div class="lote-head">
-        <span class="lote-id">${p.uf} · ${p.lote_id}</span>
+        <span class="lote-id" style="color:${cor};">${p.uf} · ${p.lote_id}</span>
       </div>
       <div class="data-row"><span class="k">Extensão do trecho</span><span class="v">${p.extensao_km ? p.extensao_km.toLocaleString('pt-BR', {maximumFractionDigits:1}) + ' km' : '—'}</span></div>
       <div class="data-row"><span class="k">Período</span><span class="v">${p.periodo}</span></div>
@@ -234,7 +254,7 @@ function selectTrecho(feature, layer) {
       <div class="data-row"><span class="k">Programa</span><span class="v">${p.programa}</span></div>
     </div>`;
 
-  layer.bindPopup(`<span class="popup-br">${p.rodovia}</span>${p.uf} · ${p.lote_id}`).openPopup();
+  layer.bindPopup(`<span class="popup-br" style="color:${cor};">${p.rodovia}</span>${p.uf} · ${p.lote_id}`).openPopup();
 }
 
 /* ============================================================

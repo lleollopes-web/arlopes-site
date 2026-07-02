@@ -420,13 +420,20 @@ button, .btn {
   font-size: 1.5rem;
   color: var(--yellow);
   margin-bottom: 4px;
+  transition: color 0.2s ease;
 }
 .map-panel .uf-tag {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--text-dim);
-  margin-bottom: 22px;
   display: block;
+}
+.panel-header {
+  padding: 14px 16px;
+  margin: -8px -16px 22px;
+  border-radius: var(--radius);
+  border-left: 4px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 .panel-empty {
   margin: auto 0;
